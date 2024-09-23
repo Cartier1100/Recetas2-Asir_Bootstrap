@@ -26,7 +26,7 @@
   </style>
 </head>
 <body>
-  <!-- Menú de navegación con búsqueda -->
+  <!-- Menú de navegación con búsqueda diferente -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">Recetas</a>
@@ -38,22 +38,50 @@
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="#">Inicio</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Recetas</a>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Categorías
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Carnes</a></li>
+              <li><a class="dropdown-item" href="#">Vegetarianas</a></li>
+              <li><a class="dropdown-item" href="#">Postres</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Todas las recetas</a></li>
+            </ul>
           </li>
         </ul>
-        <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Buscar receta" aria-label="Buscar">
-          <button class="btn btn-outline-success" type="submit">Buscar</button>
-        </form>
+        <!-- Botón para abrir el modal de búsqueda -->
+        <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#searchModal">
+          Buscar receta
+        </button>
       </div>
     </div>
   </nav>
+
+  <!-- Modal de búsqueda -->
+  <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="searchModalLabel">Buscar Receta</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Buscar receta" aria-label="Buscar">
+            <button class="btn btn-outline-success" type="submit">Buscar</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <div class="container">
     <h1 class="text-center my-4">Recetas</h1>
 
     <div class="row g-4">
+      <!-- Recetas previamente agregadas -->
       <div class="col-md-6 col-lg-3">
         <div class="card h-100 shadow-sm">
           <img src="./pollojugoso.png" class="card-img-top" alt="Pollo Jugoso">
@@ -114,6 +142,9 @@
           </div>
         </div>
       </div>
+
+      <!-- Recetas adicionales... -->
+      
     </div>
   </div>
 
