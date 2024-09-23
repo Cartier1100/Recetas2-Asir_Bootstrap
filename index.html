@@ -8,7 +8,7 @@
   <style>
     .card-img-top {
       object-fit: cover;
-      height: 200px; 
+      height: 200px;
     }
     .card {
       height: 100%;
@@ -18,14 +18,43 @@
       flex-direction: column;
       justify-content: space-between;
     }
+    @media (max-width: 767.98px) {
+      .card-img-top {
+        height: 150px;
+      }
+    }
   </style>
 </head>
 <body>
+  <!-- Menú de navegación con búsqueda -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Recetas</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Recetas</a>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Buscar receta" aria-label="Buscar">
+          <button class="btn btn-outline-success" type="submit">Buscar</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
   <div class="container">
     <h1 class="text-center my-4">Recetas</h1>
-    
+
     <div class="row g-4">
-      <div class="col-md-3">
+      <div class="col-md-6 col-lg-3">
         <div class="card h-100 shadow-sm">
           <img src="./pollojugoso.png" class="card-img-top" alt="Pollo Jugoso">
           <div class="card-body">
@@ -42,7 +71,7 @@
         </div>
       </div>
 
-      <div class="col-md-3">
+      <div class="col-md-6 col-lg-3">
         <div class="card h-100 shadow-sm">
           <img src="./arrozdemama.png" class="card-img-top" alt="Arroz de mamá">
           <div class="card-body">
@@ -60,7 +89,7 @@
         </div>
       </div>
 
-      <div class="col-md-3">
+      <div class="col-md-6 col-lg-3">
         <div class="card h-100 shadow-sm">
           <img src="./olletaalcoyana.png" class="card-img-top" alt="Olleta Alcoyana">
           <div class="card-body">
@@ -76,8 +105,8 @@
           </div>
         </div>
       </div>
-      
-      <div class="col-md-3">
+
+      <div class="col-md-6 col-lg-3">
         <div class="card h-100 shadow-sm">
           <div class="card-body d-flex flex-column justify-content-center">
             <h5 class="card-title text-center">Próxima receta</h5>
