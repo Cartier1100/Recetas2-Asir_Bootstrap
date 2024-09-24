@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Añadir Receta</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+    .form-container {
+      background-color: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      margin-top: 50px;
+    }
+    .form-title {
+      color: #007bff;
+      font-weight: bold;
+    }
+    .form-label {
+      font-weight: bold;
+    }
+    .btn-submit {
+      background-color: #007bff;
+      border-color: #007bff;
+    }
+    .btn-submit:hover {
+      background-color: #0056b3;
+      border-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- Título del formulario -->
+    <h2 class="text-center my-4 form-title">Añadir Nueva Receta</h2>
+    
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <!-- Contenedor del formulario con estilo -->
+        <div class="form-container">
+          <form>
+            <!-- Nombre de la receta -->
+            <div class="mb-3">
+              <label for="recipeName" class="form-label">Nombre de la Receta</label>
+              <input type="text" class="form-control" id="recipeName" placeholder="Introduce el nombre de la receta" required>
+            </div>
+            <!-- Ingredientes -->
+            <div class="mb-3">
+              <label for="ingredients" class="form-label">Ingredientes</label>
+              <textarea class="form-control" id="ingredients" rows="4" placeholder="Lista de ingredientes (separados por comas)" required></textarea>
+            </div>
+            <!-- Instrucciones -->
+            <div class="mb-3">
+              <label for="instructions" class="form-label">Instrucciones</label>
+              <textarea class="form-control" id="instructions" rows="6" placeholder="Instrucciones de preparación" required></textarea>
+            </div>
+            <!-- Subir imagen -->
+            <div class="mb-3">
+              <label for="imageUpload" class="form-label">Subir Imagen</label>
+              <input type="file" class="form-control" id="imageUpload" accept="image/*">
+            </div>
+            <!-- Botón de envío -->
+            <div class="d-grid gap-2">
+              <button type="submit" class="btn btn-primary btn-submit">Enviar Receta</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
